@@ -1,12 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"name": "denq04.github.io",
-			"path": "NCMS\\denq04.github.io"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }
