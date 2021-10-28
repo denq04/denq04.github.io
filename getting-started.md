@@ -1,9 +1,7 @@
 ---
-order: 10
+order: 9
 ---
 
 # Getting Started
 
-![](logo.png)
-
-Welcome to the NCMS for WorldBox documentation.
+### 
