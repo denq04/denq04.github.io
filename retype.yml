@@ -1,6 +1,6 @@
 input: .
 output: NCMS
-url: # Add your website address here
+url: https://denq04.github.io/NCMS # Add your website address here
 branding:
   title: NCMS
   label: Docs
