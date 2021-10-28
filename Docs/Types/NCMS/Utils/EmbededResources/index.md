@@ -1,0 +1,3 @@
+# EmbededResources
+
+Text
