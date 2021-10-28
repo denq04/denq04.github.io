@@ -2,11 +2,9 @@
 order: 10
 ---
 
-# NCMS
+# Nikon's projects
 
-![](logo.png)
 
-Welcome to the NCMS documentation.
-NCMS is the modding system with included pathing and working with uncompiled C# code.
+Nothing to do here
 
-[!ref](getting-started.md)
+[!ref NCMS Docs](/NCMS)
