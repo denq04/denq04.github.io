@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="turbo-root" content="/speciesbox">
+    <meta name="turbo-cache-control" content="no-cache">
+
+    <!-- Primary Meta Tags -->
+    <title>Commands</title>
+    <meta name="title" content="Commands">
+    <meta name="description" content="Aliases" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://denq04.github.io/speciesbox/commands/">
+    <meta property="og:title" content="Commands">
+    <meta property="og:description" content="Aliases">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://denq04.github.io/speciesbox/commands/">
+    <meta property="twitter:title" content="Commands">
+    <meta property="twitter:description" content="Aliases">
+    
+    <script>(function () { var el = document.documentElement, m = localStorage.getItem("/speciesbox/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="/speciesbox/resources/css/retype.css?v=1.10.689548755031" rel="stylesheet" data-turbo-track="reload" />
+
+    <script type="text/javascript" src="/speciesbox/resources/js/config.js?v=1.10.689548755031" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/speciesbox/resources/js/retype.js?v=1.10" defer data-turbo-track="reload"></script>
+</head>
+    <body>
+        <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+    <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+
+    <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+    <div class="container relative flex items-center justify-between flex-grow pr-6 md:justify-start">
+        <!-- Mobile menu button skeleton -->
+        <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center flex-shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+        <div v-cloak id="docs-sidebar-toggle"></div>
+
+        <!-- Logo -->
+        <div class="flex items-center justify-between h-full py-2 md:w-75">
+            <div class="flex items-center px-2 md:px-6">
+                <a id="docs-site-logo" href="/speciesbox/" class="flex items-center leading-snug text-2xl">
+                    <span class="w-10 mr-2 flex-grow-0 flex-shrink-0 overflow-hidden">
+                        <img class="max-h-10 dark:hidden md:inline-block" src="/speciesbox/logo.png">
+                        <img class="max-h-10 hidden dark:inline-block" src="/speciesbox/logo.png">
+                    </span>
+                    <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">SpeciesBox</span>
+                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Help</span>
+            </div>
+
+            <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+        </div>
+
+        <div class="flex justify-between md:flex-grow">
+            <!-- Top Nav -->
+            <nav class="hidden md:flex">
+    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+        <li class="md:mr-6">
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="/speciesbox/guides/">Guides</a>
+        </li>
+        <li class="md:mr-6">
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="/speciesbox/info/">Info</a>
+        </li>
+        <li class="md:mr-6">
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="/speciesbox/commands/">Commands</a>
+        </li>
+        <li class="md:mr-6">
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="/authors">Authors</a>
+        </li>
+    </ul>
+</nav>
+
+            <!-- Header Right Skeleton -->
+            <div v-cloak class="flex justify-end flex-grow skeleton">
+
+                <!-- Search input mock -->
+                <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                    <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                    </div>
+
+                    <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
+                    style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search docs" />
+                </div>
+
+                <!-- Mobile search button mock -->
+                <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                </div>
+
+                <!-- Dark mode switch placehokder -->
+                <div class="w-10 h-10 lg:ml-2"></div>
+
+                <!-- History button mock -->
+                <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                </div>
+            </div>
+
+            <div v-cloak class="flex items-center justify-end flex-grow">
+                <div id="docs-mobile-search-button"></div>
+                <doc-search-desktop></doc-search-desktop>
+
+                <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                <doc-history></doc-history>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+<div v-cloak class="fixed flex flex-col flex-shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+
+    <!-- Render this div, if config.showSidebarFilter is `true` -->
+    <div class="flex items-center h-16 px-6">
+        <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter" />
+    </div>
+
+    <div class="pl-6 mb-4 mt-1">
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+    </div>
+
+    <div class="flex-shrink-0 mt-auto bg-transparent dark:border-dark-650">
+        <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+    </div>
+</div>
+
+<!-- Sidebar component -->
+<doc-sidebar v-cloak>
+    <template #sidebar-footer>
+        <div
+            class="flex-shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650"
+        >
+
+            <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                <nav>
+                    <ul class="flex flex-wrap justify-center items-center">
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/guides">Guides</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/info">Info</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/commands">Commands</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/authors">Authors</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+        </div>
+    </template>
+</doc-sidebar>
+
+
+        <div class="flex-grow min-w-0 dark:bg-dark-850">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+            <div class="flex">
+    <div class="flex-grow min-w-0 px-6 md:px-16">
+        <main class="relative pt-6 pb-16">
+            <div class="docs-markdown" id="docs-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="docs-sidebar-right-toggle"></div>
+               
+                <!-- Page content  -->
+<doc-anchor-target id="commands" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#commands">#</doc-anchor-trigger>
+        <span>Commands</span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="cast">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cast">#</doc-anchor-trigger>
+        <span>Cast</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">cast</td>
+<td style="text-align: center;">0h:0m:30s</td>
+<td style="text-align: left;">Cast a spell<br />Use <code v-pre>_cast spell_name</code> to cast a spell on you<br />Use <code v-pre>_cast spell_name user_id</code> to cast a spell on someone other<br />Use <code v-pre>_status spells</code> to check your learned spells<br />Use <code v-pre>_info spells</code> to check info about all spells<br /><em>Each spell casting gives xp for character and for magic skill. Magic skill level reducing spells cooldown and manacost</em></td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="contact">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#contact">#</doc-anchor-trigger>
+        <span>Contact</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">contact, pray, ask</td>
+<td style="text-align: center;">0h:0m:20s</td>
+<td style="text-align: left;">Contact with outer powers, donate gold in exchange for something<br />Use <code v-pre>_contact</code> to start contact<br /><em>Each contact gives xp for contact skill and for character.</em></td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="cooldowns">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cooldowns">#</doc-anchor-trigger>
+        <span>Cooldowns</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">cooldowns, cds, c</td>
+<td style="text-align: center;">0h:0m:5s</td>
+<td style="text-align: left;">Check your cooldowns<br />Use <code v-pre>_cooldowns</code> or <code v-pre>_c</code> to check your cooldowns</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="craft">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#craft">#</doc-anchor-trigger>
+        <span>Craft</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">craft</td>
+<td style="text-align: center;">0h:0m:10s</td>
+<td style="text-align: left;">Craft an items<br />Use <code v-pre>_craft</code> to start crafting items<br /><em>Each crafting gives xp for special skill and for character.</em></td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="debug">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#debug">#</doc-anchor-trigger>
+        <span>Debug</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">debug</td>
+<td style="text-align: center;">0h:0m:0s</td>
+<td style="text-align: left;">Switch bot&#x27;s debug state</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="delete">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#delete">#</doc-anchor-trigger>
+        <span>Delete</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">delete</td>
+<td style="text-align: center;">0h:5m:0s</td>
+<td style="text-align: left;">Delete your character</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="dungeon">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dungeon">#</doc-anchor-trigger>
+        <span>Dungeon</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">dungeon</td>
+<td style="text-align: center;">4h:0m:0s</td>
+<td style="text-align: left;">Enter to the dungeon and try to find hidden treasures<br />Use <code v-pre>_dungeon</code> to start adventure in dungeon<br /><em>Each dungeon will have 25 levels</em><br /><em>Each dungeon level will have 7 rooms</em><br /><em>Each dungeon level always will have five fight rooms, where you need to defeat enemy. You can run away, but you will loose all of your found items</em><br /><em>Each dungeon level always will have one event room, where you need to decide what to do, and there will happen event dependent of your choice</em><br /><em>Each dungeon level always will have one boss room, where you need to defeat the boss. After killing boss you will open constant shortcut to the next level</em><br /><em>You can exit with saving items that you found in dungeon after cleaning any room</em><br /><em>If you will die in dungeon, you will not receive found items</em></td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="equip">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#equip">#</doc-anchor-trigger>
+        <span>Equip</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">equip, unequip</td>
+<td style="text-align: center;">0h:0m:5s</td>
+<td style="text-align: left;">Equip and unequip your equipments<br />Use <code v-pre>_equip item_id</code> to equip equipment from your inventory<br />Use <code v-pre>_unequip item_slot</code> to unequip equipment to your inventory. <code v-pre>item_slot</code> can be: <code v-pre>all</code>, <code v-pre>weapon</code>, <code v-pre>helmet</code>, <code v-pre>armor</code>, <code v-pre>boots</code>, <code v-pre>amulet</code>, <code v-pre>ring</code></td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="eval">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#eval">#</doc-anchor-trigger>
+        <span>Eval</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">eval</td>
+<td style="text-align: center;">0h:0m:0s</td>
+<td style="text-align: left;">Evaluates JavaScript code and executes it</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="fight">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fight">#</doc-anchor-trigger>
+        <span>Fight</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">fight, battle, truefight, truebattle</td>
+<td style="text-align: center;">0h:2m:0s</td>
+<td style="text-align: left;">Fight with other players<br />Use <code v-pre>_fight user_id</code> to start fight with user<br />Use <code v-pre>_truefight user_id</code> to start fight with user with limit of five effects on each</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="gather">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gather">#</doc-anchor-trigger>
+        <span>Gather</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">gather</td>
+<td style="text-align: center;">1h:0m:0s</td>
+<td style="text-align: left;">Gathering wood, food, bones and metals<br />Use <code v-pre>_gather</code> to start gathering<br /><em>Each gathering gives xp for gather skill and for character.</em></td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="guild">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#guild">#</doc-anchor-trigger>
+        <span>Guild</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">g, guild</td>
+<td style="text-align: center;">0h:0m:5s</td>
+<td style="text-align: left;">Check your or other user&#x27;s status<br />Use <code v-pre>_guild</code> to check your guild<br />Use <code v-pre>_guild create guild_name</code> to create new guild<br />Use <code v-pre>_guild leave</code> to leave your guild<br />Use <code v-pre>_guild inventory</code> to check guild&#x27;s inventory<br />Use <code v-pre>_guild donate</code> to donate items to your guild<br /><strong>~</strong> Use <code v-pre>_guild with</code> to get items from guild inventory<br /><strong>~</strong> Use <code v-pre>_guild invite user_id</code> to invite someone to your guild<br /><strong>~</strong> Use <code v-pre>_guild kick user_id</code> to kick someone from your guild<br /><strong>!</strong> Use <code v-pre>_guild rename new_name</code> to rename your guild<br /><strong>!</strong> Use <code v-pre>_guild motto new_motto</code> to set motto for your guild<br /><strong>!</strong> Use <code v-pre>_guild upgrade</code> to upgrade your guild. <br /><strong>!</strong> Use <code v-pre>_guild promote user_id</code> to promote user to aristocrats<br /><strong>!</strong> Use <code v-pre>_guild demote user_id</code> to demote user from aristocrats<br /><strong>!</strong> Use <code v-pre>_guild makeowner user_id</code> to make this user guild&#x27;s owner instead of you<br /><strong>~</strong> — Only aristocrats and owners can use this commands<br /><strong>!</strong> — Only guild owners can use this commands<br /></td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="help">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#help">#</doc-anchor-trigger>
+        <span>Help</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">help</td>
+<td style="text-align: center;">0h:0m:5s</td>
+<td style="text-align: left;">Use <code v-pre>_help</code> to receive help</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="information">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#information">#</doc-anchor-trigger>
+        <span>Information</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">information, info</td>
+<td style="text-align: center;">0h:0m:10s</td>
+<td style="text-align: left;">Informations<br />Use <code v-pre>_info</code> to know informations<br />Use <code v-pre>_info traits</code> to know information about traits<br />Use <code v-pre>_info spells</code> to know information about spells<br />Use <code v-pre>_info effects</code> to know information about effects<br />Use <code v-pre>_info species</code> to know information about species</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="inventory">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#inventory">#</doc-anchor-trigger>
+        <span>Inventory</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">inventory, inv, i</td>
+<td style="text-align: center;">0h:0m:3s</td>
+<td style="text-align: left;">Check your items, equipments and resources<br />Use <code v-pre>_inventory equipments</code> or <code v-pre>_i e</code> to check your equipments<br />Use <code v-pre>_inventory resources</code> or <code v-pre>_i r</code> to check your resources<br />Use <code v-pre>_inventory gems</code> or <code v-pre>_i g</code> to check your gems</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="ping">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#ping">#</doc-anchor-trigger>
+        <span>Ping</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">ping, pong</td>
+<td style="text-align: center;">0h:0m:5s</td>
+<td style="text-align: left;">Check bot&#x27;s status</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="prefix">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#prefix">#</doc-anchor-trigger>
+        <span>Prefix</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">prefix</td>
+<td style="text-align: center;">NaNh:NaNm:NaNs</td>
+<td style="text-align: left;">Change bot&#x27;s prefix on this server<br />Use <code v-pre>_prefix</code> to see server prefix<br />Use <code v-pre>_prefix new_prefix</code> to change current prefix to new prefix (cooldown 5 minutes)</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="pursuit">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pursuit">#</doc-anchor-trigger>
+        <span>Pursuit</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">pursuit, pur, p</td>
+<td style="text-align: center;">2h:0m:0s</td>
+<td style="text-align: left;">Doing pursuit which increasing pursuit, receive few xp and a chance to receive trait</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="raid">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#raid">#</doc-anchor-trigger>
+        <span>Raid</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">raid, raids</td>
+<td style="text-align: center;">NaNh:NaNm:NaNs</td>
+<td style="text-align: left;">Change bot&#x27;s raids channel and role<br />Use <code v-pre>_raid</code> to see raid role and channel<br />Use <code v-pre>_raid start</code> to start raid<br />Use <code v-pre>_raid startWar</code> to start war<br />Use <code v-pre>_raid channel channel_id</code> to set raids channel<br />Use <code v-pre>_raid role role_name role_id</code> to set raids channel. <code v-pre>role_name</code> can be <code v-pre>humans</code>, <code v-pre>elves</code>, <code v-pre>orcs</code>, <code v-pre>dwarfes</code>, <code v-pre>don</code></td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="reminder">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#reminder">#</doc-anchor-trigger>
+        <span>Reminder</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">reminders, reminder, remind, re</td>
+<td style="text-align: center;">0h:0m:5s</td>
+<td style="text-align: left;">Reminder for commands cooldowns ends.<br />Bot will ping you when cooldown ended for commands with enabled reminders<br />Use <code v-pre>_reminder</code> to see all enabled reminders<br />Use <code v-pre>_reminder command_name</code> to enable/disable reminder for this command</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="rise">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rise">#</doc-anchor-trigger>
+        <span>Rise</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">rise</td>
+<td style="text-align: center;">0h:15m:0s</td>
+<td style="text-align: left;">Use <code v-pre>_rise</code> to rise to new incarnation.<br /><em>You need to be on maximum level to use this command</em></td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="rob">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rob">#</doc-anchor-trigger>
+        <span>Rob</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">rob</td>
+<td style="text-align: center;">16h:0m:0s</td>
+<td style="text-align: left;">Use this to rob other user for 12% of their gold<br />Use <code v-pre>_rob user_id</code> to rob other user for 12% of their gold</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="staff">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#staff">#</doc-anchor-trigger>
+        <span>Staff</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">staff</td>
+<td style="text-align: center;">0h:0m:5s</td>
+<td style="text-align: left;">Check your or other user&#x27;s status<br />Use <code v-pre>_staff</code> to get list of bot&#x27;s staff members<br />Use <code v-pre>_staff add user_id</code> to add user to staff list<br />Use <code v-pre>_staff remove user_id</code> to remove user from staff list<br /></td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="start">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#start">#</doc-anchor-trigger>
+        <span>Start</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">start</td>
+<td style="text-align: center;">0h:5m:0s</td>
+<td style="text-align: left;">Start playing SpeciesBox! By this command you can create your character and start play!</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="statistics">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#statistics">#</doc-anchor-trigger>
+        <span>Statistics</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">statistics, stats, st</td>
+<td style="text-align: center;">0h:0m:5s</td>
+<td style="text-align: left;">Check your statistics</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="status">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#status">#</doc-anchor-trigger>
+        <span>Status</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">status, s</td>
+<td style="text-align: center;">0h:0m:10s</td>
+<td style="text-align: left;">Check your or other user&#x27;s status<br />Use <code v-pre>_status</code> to check your status<br />Use <code v-pre>_status user_id</code> to check user&#x27;s status<br />Use <code v-pre>_status traits</code> to check your traits<br />Use <code v-pre>_status user_id traits</code> to check user&#x27;s traits<br />Use <code v-pre>_status spells</code> to check your spells<br />Use <code v-pre>_status user_id spells</code> to check user&#x27;s spells<br />Use <code v-pre>_status effects</code> to check your effects<br />Use <code v-pre>_status user_id effects</code> to check user&#x27;s effects<br />Use <code v-pre>_status equipments</code> to check your equipments<br />Use <code v-pre>_status user_id equipments</code> to check user&#x27;s equipments<br />Use <code v-pre>_status species</code> to check your species<br />Use <code v-pre>_status user_id species</code> to check user&#x27;s species<br /></td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="trade">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#trade">#</doc-anchor-trigger>
+        <span>Trade</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">trade</td>
+<td style="text-align: center;">0h:2m:0s</td>
+<td style="text-align: left;">Trade with other players<br />Use <code v-pre>_trade user_id</code> to start trade with user</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<doc-anchor-target id="use">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#use">#</doc-anchor-trigger>
+        <span>Use</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">use, u</td>
+<td style="text-align: center;">0h:0m:5s</td>
+<td style="text-align: left;">Use items from your inventory (not equipment)<br />Use <code v-pre>_use food</code> to eat one food and regen your hp, stamina and mana for 15% of maximum (20% with regeneration trait)<br />Use <code v-pre>_use cfood</code> to eat one cooked food and regen your hp, stamina and mana for 25% of maximum (30% with regeneration trait)<br />Use <code v-pre>_use ug</code> to use upgrade gem and upgrade your character level<br />Use <code v-pre>_use hg</code> to use health gem and increase your current health (not max health)<br />Use <code v-pre>_use hg equipment_id</code> to use health gem on equipment to increase this equipment health stat<br />Use <code v-pre>_use sg</code> to use stamina gem and increase your current stamina (not max stamina)<br />Use <code v-pre>_use sg equipment_id</code> to use stamina gem on equipment to increase this equipment stamina stat<br />Use <code v-pre>_use mg</code> to use mana gem and increase your current mana (not max mana)<br />Use <code v-pre>_use mg equipment_id</code> to use mana gem on equipment to increase this equipment mana stat<br />Use <code v-pre>_use pg</code> to use power gem and temporary increase your attack stat<br />Use <code v-pre>_use pg equipment_id</code> to use power gem on equipment to increase this equipment attack stat<br />Use <code v-pre>_use dg</code> to use defense gem and temporary increase your defense stat<br />Use <code v-pre>_use dg equipment_id</code> to use defense gem on equipment to increase this equipment defense stat<br />Use <code v-pre>_use ag</code> to break absolute gem and receive few other type gems<br /><em>Each gem usage gives xp for character and for alchemy skill. Alchemy skill can increase gems effects. You can use gems only 5 times on one equipment</em></td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+
+
+
+
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results />
+            </div>
+
+            
+<nav class="flex mt-14">
+    <div class="w-1/2">
+        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/speciesbox/info/equipments/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+            <span>
+                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                <span class="block mt-1">Equipments</span>
+            </span>
+        </a>
+    </div>
+
+    <div class="w-1/2">
+    </div>
+</nav>
+
+
+        </main>
+
+        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between">
+    <div>
+        <ul class="flex flex-wrap items-center text-sm">
+</ul>
+
+    </div>
+    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2021. No rights reserved, but please, do not abuse</p>
+</div>
+</footer>
+
+        </div>
+    </div>
+    
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 transform translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:flex-shrink-0 lg:pt-6 lg:transform-none lg:w-56 lg:z-0 md:w-72 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+        </div>
+    </div>
+    
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+        <div id="docs-overlay-target"></div>
+
+        <script>window.__DOCS__ = { "title": "Commands", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    </body>
+</html>
