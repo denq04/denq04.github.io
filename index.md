@@ -7,5 +7,5 @@ order: 10
 
 Nothing to do here
 
-<!-- [NCMS Docs](/NCMS) -->
+[NCMS Docs](/ncms)
 [SpeciesBox](/speciesbox)
