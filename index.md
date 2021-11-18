@@ -8,4 +8,3 @@ order: 10
 Nothing to do here
 
 [NCMS Docs](/ncms) <br />
-[SpeciesBox](/speciesbox)
