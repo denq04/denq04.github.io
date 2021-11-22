@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="turbo-root" content="/speciesbox">
+    <meta name="turbo-cache-control" content="no-cache">
+
+    <!-- Primary Meta Tags -->
+    <title>Equipments</title>
+    <meta name="title" content="Equipments">
+    <meta name="description" content="Equipments are the items, which can be Crafted and Equiped" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://denq04.github.io/speciesbox/info/equipments/">
+    <meta property="og:title" content="Equipments">
+    <meta property="og:description" content="Equipments are the items, which can be Crafted and Equiped">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://denq04.github.io/speciesbox/info/equipments/">
+    <meta property="twitter:title" content="Equipments">
+    <meta property="twitter:description" content="Equipments are the items, which can be Crafted and Equiped">
+    
+    <script>(function () { var el = document.documentElement, m = localStorage.getItem("/speciesbox/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="/speciesbox/resources/css/retype.css?v=1.10.690910790374" rel="stylesheet" data-turbo-track="reload" />
+
+    <script type="text/javascript" src="/speciesbox/resources/js/config.js?v=1.10.690910790374" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/speciesbox/resources/js/retype.js?v=1.10" defer data-turbo-track="reload"></script>
+</head>
+    <body>
+        <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+    <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+
+    <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+    <div class="container relative flex items-center justify-between flex-grow pr-6 md:justify-start">
+        <!-- Mobile menu button skeleton -->
+        <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center flex-shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+        <div v-cloak id="docs-sidebar-toggle"></div>
+
+        <!-- Logo -->
+        <div class="flex items-center justify-between h-full py-2 md:w-75">
+            <div class="flex items-center px-2 md:px-6">
+                <a id="docs-site-logo" href="/speciesbox/" class="flex items-center leading-snug text-2xl">
+                    <span class="w-10 mr-2 flex-grow-0 flex-shrink-0 overflow-hidden">
+                        <img class="max-h-10 dark:hidden md:inline-block" src="/speciesbox/logo.png">
+                        <img class="max-h-10 hidden dark:inline-block" src="/speciesbox/logo.png">
+                    </span>
+                    <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">SpeciesBox</span>
+                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Help</span>
+            </div>
+
+            <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+        </div>
+
+        <div class="flex justify-between md:flex-grow">
+            <!-- Top Nav -->
+            <nav class="hidden md:flex">
+    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+        <li class="md:mr-6">
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="/speciesbox/guides/">Guides</a>
+        </li>
+        <li class="md:mr-6">
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="/speciesbox/info/">Info</a>
+        </li>
+        <li class="md:mr-6">
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="/speciesbox/commands/">Commands</a>
+        </li>
+        <li class="md:mr-6">
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="/speciesbox/authors/">Authors</a>
+        </li>
+    </ul>
+</nav>
+
+            <!-- Header Right Skeleton -->
+            <div v-cloak class="flex justify-end flex-grow skeleton">
+
+                <!-- Search input mock -->
+                <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                    <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                    </div>
+
+                    <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
+                    style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search docs" />
+                </div>
+
+                <!-- Mobile search button mock -->
+                <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                </div>
+
+                <!-- Dark mode switch placehokder -->
+                <div class="w-10 h-10 lg:ml-2"></div>
+
+                <!-- History button mock -->
+                <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                </div>
+            </div>
+
+            <div v-cloak class="flex items-center justify-end flex-grow">
+                <div id="docs-mobile-search-button"></div>
+                <doc-search-desktop></doc-search-desktop>
+
+                <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                <doc-history></doc-history>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+<div v-cloak class="fixed flex flex-col flex-shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+
+    <!-- Render this div, if config.showSidebarFilter is `true` -->
+    <div class="flex items-center h-16 px-6">
+        <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter" />
+    </div>
+
+    <div class="pl-6 mb-4 mt-1">
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+    </div>
+
+    <div class="flex-shrink-0 mt-auto bg-transparent dark:border-dark-650">
+        <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+    </div>
+</div>
+
+<!-- Sidebar component -->
+<doc-sidebar v-cloak>
+    <template #sidebar-footer>
+        <div
+            class="flex-shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650"
+        >
+
+            <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                <nav>
+                    <ul class="flex flex-wrap justify-center items-center">
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/guides">Guides</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/info">Info</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/commands">Commands</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/authors">Authors</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+        </div>
+    </template>
+</doc-sidebar>
+
+
+        <div class="flex-grow min-w-0 dark:bg-dark-850">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+            <div class="flex">
+    <div class="flex-grow min-w-0 px-6 md:px-16">
+        <main class="relative pt-6 pb-16">
+            <div class="docs-markdown" id="docs-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="docs-sidebar-right-toggle"></div>
+               
+                <!-- Page content  -->
+<doc-anchor-target id="equipments" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#equipments">#</doc-anchor-trigger>
+        <span>Equipments</span>
+    </h1>
+</doc-anchor-target>
+<p>Equipments are the items, which can be <a href="/speciesbox/commands/#craft">Crafted</a> and <a href="/speciesbox/commands/#equip">Equiped</a>  <br /></p>
+<doc-anchor-target id="armor">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#armor">#</doc-anchor-trigger>
+        <span>Armor</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="leather-helmet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#leather-helmet">#</doc-anchor-trigger>
+        <span>Leather helmet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/helmet_leather.png" alt="Leather helmet" /></td>
+<td style="text-align: center;">Leather</td>
+<td style="text-align: center;">Helmet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 2 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="leather-armor">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#leather-armor">#</doc-anchor-trigger>
+        <span>Leather armor</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/armor_leather.png" alt="Leather armor" /></td>
+<td style="text-align: center;">Leather</td>
+<td style="text-align: center;">Armor</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 3 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="leather-boots">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#leather-boots">#</doc-anchor-trigger>
+        <span>Leather boots</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/boots_leather.png" alt="Leather boots" /></td>
+<td style="text-align: center;">Leather</td>
+<td style="text-align: center;">Boots</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 2 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="bone-amulet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bone-amulet">#</doc-anchor-trigger>
+        <span>Bone amulet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/amulet_bone.png" alt="Bone amulet" /></td>
+<td style="text-align: center;">Bone</td>
+<td style="text-align: center;">Amulet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 1 <br /> Defense: 0 <br /> Stamina: 1 <br /> Mana: 1</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="bone-ring">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bone-ring">#</doc-anchor-trigger>
+        <span>Bone ring</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/ring_bone.png" alt="Bone ring" /></td>
+<td style="text-align: center;">Bone</td>
+<td style="text-align: center;">Ring</td>
+<td style="text-align: center;">Health: 1 <br /> Attack: 1 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="copper-helmet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#copper-helmet">#</doc-anchor-trigger>
+        <span>Copper helmet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/helmet_copper.png" alt="Copper helmet" /></td>
+<td style="text-align: center;">Copper</td>
+<td style="text-align: center;">Helmet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 3 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="copper-armor">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#copper-armor">#</doc-anchor-trigger>
+        <span>Copper armor</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/armor_copper.png" alt="Copper armor" /></td>
+<td style="text-align: center;">Copper</td>
+<td style="text-align: center;">Armor</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 4 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="copper-boots">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#copper-boots">#</doc-anchor-trigger>
+        <span>Copper boots</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/boots_copper.png" alt="Copper boots" /></td>
+<td style="text-align: center;">Copper</td>
+<td style="text-align: center;">Boots</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 3 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="copper-amulet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#copper-amulet">#</doc-anchor-trigger>
+        <span>Copper amulet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/amulet_copper.png" alt="Copper amulet" /></td>
+<td style="text-align: center;">Copper</td>
+<td style="text-align: center;">Amulet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 2 <br /> Defense: 0 <br /> Stamina: 1 <br /> Mana: 1</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="copper-ring">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#copper-ring">#</doc-anchor-trigger>
+        <span>Copper ring</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/ring_copper.png" alt="Copper ring" /></td>
+<td style="text-align: center;">Copper</td>
+<td style="text-align: center;">Ring</td>
+<td style="text-align: center;">Health: 1 <br /> Attack: 2 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="bronze-helmet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bronze-helmet">#</doc-anchor-trigger>
+        <span>Bronze helmet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/helmet_bronze.png" alt="Bronze helmet" /></td>
+<td style="text-align: center;">Bronze</td>
+<td style="text-align: center;">Helmet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 4 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="bronze-armor">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bronze-armor">#</doc-anchor-trigger>
+        <span>Bronze armor</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/armor_bronze.png" alt="Bronze armor" /></td>
+<td style="text-align: center;">Bronze</td>
+<td style="text-align: center;">Armor</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 5 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="bronze-boots">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bronze-boots">#</doc-anchor-trigger>
+        <span>Bronze boots</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/boots_bronze.png" alt="Bronze boots" /></td>
+<td style="text-align: center;">Bronze</td>
+<td style="text-align: center;">Boots</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 4 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="bronze-amulet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bronze-amulet">#</doc-anchor-trigger>
+        <span>Bronze amulet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/amulet_bronze.png" alt="Bronze amulet" /></td>
+<td style="text-align: center;">Bronze</td>
+<td style="text-align: center;">Amulet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 3 <br /> Defense: 0 <br /> Stamina: 2 <br /> Mana: 2</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="bronze-ring">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bronze-ring">#</doc-anchor-trigger>
+        <span>Bronze ring</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/ring_bronze.png" alt="Bronze ring" /></td>
+<td style="text-align: center;">Bronze</td>
+<td style="text-align: center;">Ring</td>
+<td style="text-align: center;">Health: 2 <br /> Attack: 3 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="silver-helmet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#silver-helmet">#</doc-anchor-trigger>
+        <span>Silver helmet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/helmet_silver.png" alt="Silver helmet" /></td>
+<td style="text-align: center;">Silver</td>
+<td style="text-align: center;">Helmet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 5 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="silver-armor">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#silver-armor">#</doc-anchor-trigger>
+        <span>Silver armor</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/armor_silver.png" alt="Silver armor" /></td>
+<td style="text-align: center;">Silver</td>
+<td style="text-align: center;">Armor</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 6 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="silver-boots">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#silver-boots">#</doc-anchor-trigger>
+        <span>Silver boots</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/boots_silver.png" alt="Silver boots" /></td>
+<td style="text-align: center;">Silver</td>
+<td style="text-align: center;">Boots</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 5 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="silver-amulet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#silver-amulet">#</doc-anchor-trigger>
+        <span>Silver amulet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/amulet_silver.png" alt="Silver amulet" /></td>
+<td style="text-align: center;">Silver</td>
+<td style="text-align: center;">Amulet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 4 <br /> Defense: 0 <br /> Stamina: 3 <br /> Mana: 3</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="silver-ring">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#silver-ring">#</doc-anchor-trigger>
+        <span>Silver ring</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/ring_silver.png" alt="Silver ring" /></td>
+<td style="text-align: center;">Silver</td>
+<td style="text-align: center;">Ring</td>
+<td style="text-align: center;">Health: 3 <br /> Attack: 4 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="iron-helmet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#iron-helmet">#</doc-anchor-trigger>
+        <span>Iron helmet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/helmet_iron.png" alt="Iron helmet" /></td>
+<td style="text-align: center;">Iron</td>
+<td style="text-align: center;">Helmet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 6 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="iron-armor">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#iron-armor">#</doc-anchor-trigger>
+        <span>Iron armor</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/armor_iron.png" alt="Iron armor" /></td>
+<td style="text-align: center;">Iron</td>
+<td style="text-align: center;">Armor</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 7 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="iron-boots">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#iron-boots">#</doc-anchor-trigger>
+        <span>Iron boots</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/boots_iron.png" alt="Iron boots" /></td>
+<td style="text-align: center;">Iron</td>
+<td style="text-align: center;">Boots</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 6 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="iron-amulet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#iron-amulet">#</doc-anchor-trigger>
+        <span>Iron amulet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/amulet_iron.png" alt="Iron amulet" /></td>
+<td style="text-align: center;">Iron</td>
+<td style="text-align: center;">Amulet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 5 <br /> Defense: 0 <br /> Stamina: 4 <br /> Mana: 4</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="iron-ring">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#iron-ring">#</doc-anchor-trigger>
+        <span>Iron ring</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/ring_iron.png" alt="Iron ring" /></td>
+<td style="text-align: center;">Iron</td>
+<td style="text-align: center;">Ring</td>
+<td style="text-align: center;">Health: 4 <br /> Attack: 5 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="steel-helmet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#steel-helmet">#</doc-anchor-trigger>
+        <span>Steel helmet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/helmet_steel.png" alt="Steel helmet" /></td>
+<td style="text-align: center;">Steel</td>
+<td style="text-align: center;">Helmet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 7 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="steel-armor">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#steel-armor">#</doc-anchor-trigger>
+        <span>Steel armor</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/armor_steel.png" alt="Steel armor" /></td>
+<td style="text-align: center;">Steel</td>
+<td style="text-align: center;">Armor</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 8 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="steel-boots">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#steel-boots">#</doc-anchor-trigger>
+        <span>Steel boots</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/boots_steel.png" alt="Steel boots" /></td>
+<td style="text-align: center;">Steel</td>
+<td style="text-align: center;">Boots</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 7 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="steel-amulet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#steel-amulet">#</doc-anchor-trigger>
+        <span>Steel amulet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/amulet_steel.png" alt="Steel amulet" /></td>
+<td style="text-align: center;">Steel</td>
+<td style="text-align: center;">Amulet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 6 <br /> Defense: 0 <br /> Stamina: 5 <br /> Mana: 5</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="steel-ring">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#steel-ring">#</doc-anchor-trigger>
+        <span>Steel ring</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/ring_steel.png" alt="Steel ring" /></td>
+<td style="text-align: center;">Steel</td>
+<td style="text-align: center;">Ring</td>
+<td style="text-align: center;">Health: 5 <br /> Attack: 6 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="mythril-helmet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mythril-helmet">#</doc-anchor-trigger>
+        <span>Mythril helmet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/helmet_mythril.png" alt="Mythril helmet" /></td>
+<td style="text-align: center;">Mythril</td>
+<td style="text-align: center;">Helmet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 8 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="mythril-armor">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mythril-armor">#</doc-anchor-trigger>
+        <span>Mythril armor</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/armor_mythril.png" alt="Mythril armor" /></td>
+<td style="text-align: center;">Mythril</td>
+<td style="text-align: center;">Armor</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 9 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="mythril-boots">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mythril-boots">#</doc-anchor-trigger>
+        <span>Mythril boots</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/boots_mythril.png" alt="Mythril boots" /></td>
+<td style="text-align: center;">Mythril</td>
+<td style="text-align: center;">Boots</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 8 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="mythril-amulet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mythril-amulet">#</doc-anchor-trigger>
+        <span>Mythril amulet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/amulet_mythril.png" alt="Mythril amulet" /></td>
+<td style="text-align: center;">Mythril</td>
+<td style="text-align: center;">Amulet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 7 <br /> Defense: 0 <br /> Stamina: 6 <br /> Mana: 6</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="mythril-ring">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mythril-ring">#</doc-anchor-trigger>
+        <span>Mythril ring</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/ring_mythril.png" alt="Mythril ring" /></td>
+<td style="text-align: center;">Mythril</td>
+<td style="text-align: center;">Ring</td>
+<td style="text-align: center;">Health: 6 <br /> Attack: 7 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="adamantine-helmet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#adamantine-helmet">#</doc-anchor-trigger>
+        <span>Adamantine helmet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/helmet_adamantine.png" alt="Adamantine helmet" /></td>
+<td style="text-align: center;">Adamantine</td>
+<td style="text-align: center;">Helmet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 10 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="adamantine-armor">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#adamantine-armor">#</doc-anchor-trigger>
+        <span>Adamantine armor</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/armor_adamantine.png" alt="Adamantine armor" /></td>
+<td style="text-align: center;">Adamantine</td>
+<td style="text-align: center;">Armor</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 11 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="adamantine-boots">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#adamantine-boots">#</doc-anchor-trigger>
+        <span>Adamantine boots</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/boots_adamantine.png" alt="Adamantine boots" /></td>
+<td style="text-align: center;">Adamantine</td>
+<td style="text-align: center;">Boots</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 0 <br /> Defense: 10 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="adamantine-amulet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#adamantine-amulet">#</doc-anchor-trigger>
+        <span>Adamantine amulet</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/amulet_adamantine.png" alt="Adamantine amulet" /></td>
+<td style="text-align: center;">Adamantine</td>
+<td style="text-align: center;">Amulet</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 9 <br /> Defense: 0 <br /> Stamina: 8 <br /> Mana: 8</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="adamantine-ring">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#adamantine-ring">#</doc-anchor-trigger>
+        <span>Adamantine ring</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Slot</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/ring_adamantine.png" alt="Adamantine ring" /></td>
+<td style="text-align: center;">Adamantine</td>
+<td style="text-align: center;">Ring</td>
+<td style="text-align: center;">Health: 8 <br /> Attack: 9 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="weapons">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#weapons">#</doc-anchor-trigger>
+        <span>Weapons</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="wood-sword">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wood-sword">#</doc-anchor-trigger>
+        <span>Wood sword</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/sword_wood.png" alt="Wood sword" /></td>
+<td style="text-align: center;">Wood</td>
+<td style="text-align: center;">Sword</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 1 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="wood-axe">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wood-axe">#</doc-anchor-trigger>
+        <span>Wood axe</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/axe_wood.png" alt="Wood axe" /></td>
+<td style="text-align: center;">Wood</td>
+<td style="text-align: center;">Axe</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 2 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: -5</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="wood-hammer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wood-hammer">#</doc-anchor-trigger>
+        <span>Wood hammer</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/hammer_wood.png" alt="Wood hammer" /></td>
+<td style="text-align: center;">Wood</td>
+<td style="text-align: center;">Hammer</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 3 <br /> Defense: 0 <br /> Stamina: -20 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="wood-spear">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wood-spear">#</doc-anchor-trigger>
+        <span>Wood spear</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/spear_wood.png" alt="Wood spear" /></td>
+<td style="text-align: center;">Wood</td>
+<td style="text-align: center;">Spear</td>
+<td style="text-align: center;">Health: -20 <br /> Attack: 2 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="wood-bow">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wood-bow">#</doc-anchor-trigger>
+        <span>Wood bow</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/bow_wood.png" alt="Wood bow" /></td>
+<td style="text-align: center;">Wood</td>
+<td style="text-align: center;">Bow</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 4 <br /> Defense: -2 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="copper-sword">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#copper-sword">#</doc-anchor-trigger>
+        <span>Copper sword</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/sword_copper.png" alt="Copper sword" /></td>
+<td style="text-align: center;">Copper</td>
+<td style="text-align: center;">Sword</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 2 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="copper-axe">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#copper-axe">#</doc-anchor-trigger>
+        <span>Copper axe</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/axe_copper.png" alt="Copper axe" /></td>
+<td style="text-align: center;">Copper</td>
+<td style="text-align: center;">Axe</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 3 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: -5</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="copper-hammer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#copper-hammer">#</doc-anchor-trigger>
+        <span>Copper hammer</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/hammer_copper.png" alt="Copper hammer" /></td>
+<td style="text-align: center;">Copper</td>
+<td style="text-align: center;">Hammer</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 4 <br /> Defense: 0 <br /> Stamina: -20 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="copper-spear">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#copper-spear">#</doc-anchor-trigger>
+        <span>Copper spear</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/spear_copper.png" alt="Copper spear" /></td>
+<td style="text-align: center;">Copper</td>
+<td style="text-align: center;">Spear</td>
+<td style="text-align: center;">Health: -20 <br /> Attack: 3 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="copper-bow">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#copper-bow">#</doc-anchor-trigger>
+        <span>Copper bow</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/bow_copper.png" alt="Copper bow" /></td>
+<td style="text-align: center;">Copper</td>
+<td style="text-align: center;">Bow</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 6 <br /> Defense: -3 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="bronze-sword">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bronze-sword">#</doc-anchor-trigger>
+        <span>Bronze sword</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/sword_bronze.png" alt="Bronze sword" /></td>
+<td style="text-align: center;">Bronze</td>
+<td style="text-align: center;">Sword</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 3 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="bronze-axe">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bronze-axe">#</doc-anchor-trigger>
+        <span>Bronze axe</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/axe_bronze.png" alt="Bronze axe" /></td>
+<td style="text-align: center;">Bronze</td>
+<td style="text-align: center;">Axe</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 4 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: -5</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="bronze-hammer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bronze-hammer">#</doc-anchor-trigger>
+        <span>Bronze hammer</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/hammer_bronze.png" alt="Bronze hammer" /></td>
+<td style="text-align: center;">Bronze</td>
+<td style="text-align: center;">Hammer</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 5 <br /> Defense: 0 <br /> Stamina: -25 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="bronze-spear">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bronze-spear">#</doc-anchor-trigger>
+        <span>Bronze spear</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/spear_bronze.png" alt="Bronze spear" /></td>
+<td style="text-align: center;">Bronze</td>
+<td style="text-align: center;">Spear</td>
+<td style="text-align: center;">Health: -20 <br /> Attack: 4 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="bronze-bow">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bronze-bow">#</doc-anchor-trigger>
+        <span>Bronze bow</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/bow_bronze.png" alt="Bronze bow" /></td>
+<td style="text-align: center;">Bronze</td>
+<td style="text-align: center;">Bow</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 8 <br /> Defense: -4 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="silver-sword">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#silver-sword">#</doc-anchor-trigger>
+        <span>Silver sword</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/sword_silver.png" alt="Silver sword" /></td>
+<td style="text-align: center;">Silver</td>
+<td style="text-align: center;">Sword</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 4 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="silver-axe">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#silver-axe">#</doc-anchor-trigger>
+        <span>Silver axe</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/axe_silver.png" alt="Silver axe" /></td>
+<td style="text-align: center;">Silver</td>
+<td style="text-align: center;">Axe</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 5 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: -5</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="silver-hammer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#silver-hammer">#</doc-anchor-trigger>
+        <span>Silver hammer</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/hammer_silver.png" alt="Silver hammer" /></td>
+<td style="text-align: center;">Silver</td>
+<td style="text-align: center;">Hammer</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 6 <br /> Defense: 0 <br /> Stamina: -25 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="silver-spear">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#silver-spear">#</doc-anchor-trigger>
+        <span>Silver spear</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/spear_silver.png" alt="Silver spear" /></td>
+<td style="text-align: center;">Silver</td>
+<td style="text-align: center;">Spear</td>
+<td style="text-align: center;">Health: -20 <br /> Attack: 5 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="silver-bow">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#silver-bow">#</doc-anchor-trigger>
+        <span>Silver bow</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/bow_silver.png" alt="Silver bow" /></td>
+<td style="text-align: center;">Silver</td>
+<td style="text-align: center;">Bow</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 10 <br /> Defense: -5 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="iron-sword">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#iron-sword">#</doc-anchor-trigger>
+        <span>Iron sword</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/sword_iron.png" alt="Iron sword" /></td>
+<td style="text-align: center;">Iron</td>
+<td style="text-align: center;">Sword</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 5 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="iron-axe">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#iron-axe">#</doc-anchor-trigger>
+        <span>Iron axe</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/axe_iron.png" alt="Iron axe" /></td>
+<td style="text-align: center;">Iron</td>
+<td style="text-align: center;">Axe</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 6 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: -5</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="iron-hammer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#iron-hammer">#</doc-anchor-trigger>
+        <span>Iron hammer</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/hammer_iron.png" alt="Iron hammer" /></td>
+<td style="text-align: center;">Iron</td>
+<td style="text-align: center;">Hammer</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 7 <br /> Defense: 0 <br /> Stamina: -25 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="iron-spear">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#iron-spear">#</doc-anchor-trigger>
+        <span>Iron spear</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/spear_iron.png" alt="Iron spear" /></td>
+<td style="text-align: center;">Iron</td>
+<td style="text-align: center;">Spear</td>
+<td style="text-align: center;">Health: -25 <br /> Attack: 6 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="iron-bow">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#iron-bow">#</doc-anchor-trigger>
+        <span>Iron bow</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/bow_iron.png" alt="Iron bow" /></td>
+<td style="text-align: center;">Iron</td>
+<td style="text-align: center;">Bow</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 12 <br /> Defense: -6 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="steel-sword">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#steel-sword">#</doc-anchor-trigger>
+        <span>Steel sword</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/sword_steel.png" alt="Steel sword" /></td>
+<td style="text-align: center;">Steel</td>
+<td style="text-align: center;">Sword</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 6 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="steel-axe">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#steel-axe">#</doc-anchor-trigger>
+        <span>Steel axe</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/axe_steel.png" alt="Steel axe" /></td>
+<td style="text-align: center;">Steel</td>
+<td style="text-align: center;">Axe</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 7 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: -5</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="steel-hammer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#steel-hammer">#</doc-anchor-trigger>
+        <span>Steel hammer</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/hammer_steel.png" alt="Steel hammer" /></td>
+<td style="text-align: center;">Steel</td>
+<td style="text-align: center;">Hammer</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 8 <br /> Defense: 0 <br /> Stamina: -25 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="steel-spear">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#steel-spear">#</doc-anchor-trigger>
+        <span>Steel spear</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/spear_steel.png" alt="Steel spear" /></td>
+<td style="text-align: center;">Steel</td>
+<td style="text-align: center;">Spear</td>
+<td style="text-align: center;">Health: -25 <br /> Attack: 7 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="steel-bow">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#steel-bow">#</doc-anchor-trigger>
+        <span>Steel bow</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/bow_steel.png" alt="Steel bow" /></td>
+<td style="text-align: center;">Steel</td>
+<td style="text-align: center;">Bow</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 14 <br /> Defense: -7 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="mythril-sword">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mythril-sword">#</doc-anchor-trigger>
+        <span>Mythril sword</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/sword_mythril.png" alt="Mythril sword" /></td>
+<td style="text-align: center;">Mythril</td>
+<td style="text-align: center;">Sword</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 7 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="mythril-axe">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mythril-axe">#</doc-anchor-trigger>
+        <span>Mythril axe</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/axe_mythril.png" alt="Mythril axe" /></td>
+<td style="text-align: center;">Mythril</td>
+<td style="text-align: center;">Axe</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 8 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: -5</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="mythril-hammer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mythril-hammer">#</doc-anchor-trigger>
+        <span>Mythril hammer</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/hammer_mythril.png" alt="Mythril hammer" /></td>
+<td style="text-align: center;">Mythril</td>
+<td style="text-align: center;">Hammer</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 9 <br /> Defense: 0 <br /> Stamina: -25 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="mythril-spear">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mythril-spear">#</doc-anchor-trigger>
+        <span>Mythril spear</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/spear_mythril.png" alt="Mythril spear" /></td>
+<td style="text-align: center;">Mythril</td>
+<td style="text-align: center;">Spear</td>
+<td style="text-align: center;">Health: -25 <br /> Attack: 8 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="mythril-bow">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mythril-bow">#</doc-anchor-trigger>
+        <span>Mythril bow</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/bow_mythril.png" alt="Mythril bow" /></td>
+<td style="text-align: center;">Mythril</td>
+<td style="text-align: center;">Bow</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 16 <br /> Defense: -8 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="adamantine-sword">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#adamantine-sword">#</doc-anchor-trigger>
+        <span>Adamantine sword</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/sword_adamantine.png" alt="Adamantine sword" /></td>
+<td style="text-align: center;">Adamantine</td>
+<td style="text-align: center;">Sword</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 9 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="adamantine-axe">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#adamantine-axe">#</doc-anchor-trigger>
+        <span>Adamantine axe</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/axe_adamantine.png" alt="Adamantine axe" /></td>
+<td style="text-align: center;">Adamantine</td>
+<td style="text-align: center;">Axe</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 10 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: -5</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="adamantine-hammer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#adamantine-hammer">#</doc-anchor-trigger>
+        <span>Adamantine hammer</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/hammer_adamantine.png" alt="Adamantine hammer" /></td>
+<td style="text-align: center;">Adamantine</td>
+<td style="text-align: center;">Hammer</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 11 <br /> Defense: 0 <br /> Stamina: -30 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="adamantine-spear">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#adamantine-spear">#</doc-anchor-trigger>
+        <span>Adamantine spear</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/spear_adamantine.png" alt="Adamantine spear" /></td>
+<td style="text-align: center;">Adamantine</td>
+<td style="text-align: center;">Spear</td>
+<td style="text-align: center;">Health: -25 <br /> Attack: 10 <br /> Defense: 0 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+<doc-anchor-target id="adamantine-bow">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#adamantine-bow">#</doc-anchor-trigger>
+        <span>Adamantine bow</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Picture</th>
+<th style="text-align: center;">Material</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Stats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="../images/equipments/bow_adamantine.png" alt="Adamantine bow" /></td>
+<td style="text-align: center;">Adamantine</td>
+<td style="text-align: center;">Bow</td>
+<td style="text-align: center;">Health: 0 <br /> Attack: 20 <br /> Defense: -10 <br /> Stamina: 0 <br /> Mana: 0</td>
+</tr>
+</tbody>
+</table>
+<br /> 
+
+
+
+
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results />
+            </div>
+
+            
+<nav class="flex mt-14">
+    <div class="w-1/2">
+        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/speciesbox/info/effects/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+            <span>
+                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                <span class="block mt-1">Effects</span>
+            </span>
+        </a>
+    </div>
+
+    <div class="w-1/2">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/speciesbox/commands/">
+            <span>
+                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                <span class="block mt-1">Commands</span>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+        </a>
+    </div>
+</nav>
+
+
+        </main>
+
+        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between">
+    <div>
+        <ul class="flex flex-wrap items-center text-sm">
+</ul>
+
+    </div>
+    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2021. No rights reserved, but please, do not abuse</p>
+</div>
+</footer>
+
+        </div>
+    </div>
+    
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 transform translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:flex-shrink-0 lg:pt-6 lg:transform-none lg:w-56 lg:z-0 md:w-72 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+        </div>
+    </div>
+    
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+        <div id="docs-overlay-target"></div>
+
+        <script>window.__DOCS__ = { "title": "Equipments", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    </body>
+</html>
