@@ -27,11 +27,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/ncms/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/ncms/resources/css/retype.css?v=1.10.690566345826" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/ncms/resources/css/retype.css?v=1.10.691570221334" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/ncms/resources/js/config.js?v=1.10.690566345826" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/ncms/resources/js/config.js?v=1.10.691570221334" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/ncms/resources/js/retype.js?v=1.10" defer data-turbo-track="reload"></script>
-    <script id="prism-js" type="text/javascript" src="/ncms/resources/js/prism.js?v=1.10.690566345826" defer></script>
+    <script id="prism-js" type="text/javascript" src="/ncms/resources/js/prism.js?v=1.10.691570221334" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -239,10 +239,10 @@ namespace ExampleMod{
             spawnCoffeeCloud.id = &quot;coffeeCloudSpawn&quot;;
             spawnCoffeeCloud.name = &quot;coffeeCloudSpawn&quot;;
             spawnCoffeeCloud.forceBrush = &quot;sqr_0&quot;;
-            spawnCoffeeCloud.actionType = PowerActionType.Special;
+            spawnCoffeeCloud.type = PowerActionType.Special;
 
             // Action, which represents cloud spawning
-            spawnCoffeeCloud.click_action = new PowerAction(action_spawnCloud);
+            spawnCoffeeCloud.click_action = new PowerActionWithID(action_spawnCloud);
 
             // We dont need to spawn many clouds just by holding
             spawnCoffeeCloud.holdAction = false;
@@ -253,8 +253,8 @@ namespace ExampleMod{
 
             spawnCoffeeCloud.unselectWhenWindow = true;
 
-            // We dont need falling pixel
-            spawnCoffeeCloud.fallingPixel = false;
+            //// We dont need falling pixel
+            //spawnCoffeeCloud.fallingPixel = false;
 
             // Adding new god power to the AssetManager
             AssetManager.powers.add(spawnCoffeeCloud);
@@ -407,10 +407,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Reflection;
 using ReflectionUtility;
 
-namespace ExampleMod{
-    class TilesWindow{
+namespace ExampleMod
+{
+    class TilesWindow
+    {
         private static ScrollWindow window;
         private static GameObject content;
 
@@ -418,7 +421,8 @@ namespace ExampleMod{
         internal static PowerButtonSelector pbsInstance;
 
         // Initializing Tiles Window
-        public static void init(){
+        public static void init()
+        {
             // Creating new window
             window = Windows.CreateNewWindow(&quot;tilesWindow&quot;, &quot;Select Tile&quot;);
 
@@ -439,18 +443,37 @@ namespace ExampleMod{
             initTiles(); // Initializing tiles buttons inside window
         }
 
-        private static void initTiles(){
+        private static void initTiles()
+        {
 
             // Getting tiles sprites from game resources
             var sprites = Resources.LoadAll($&quot;tilemap/tiles&quot;, typeof(Sprite)).Cast&lt;Sprite&gt;().ToList();
 
+            //tilesDictBoth.AddRange(AssetManager.tiles.list);
+            //tilesListBoth.AddRange(AssetManager.topTiles.list);
 
             // Preparing list of valid sprites
             var preparedTiles = new List&lt;Sprite&gt;();
-            foreach(var pair in TileType.dict){
-                var sprite = sprites.Find(c =&gt; c.name == $&quot;{pair.Key}_0&quot;);
+            foreach (var pair in AssetManager.tiles.dict)
+            {
+                //var sprite = sprites.Find(c =&gt; c.name == $&quot;{pair.Key}_0&quot;);
+                var sprite = Resources.Load&lt;Sprite&gt;($&quot;tiles/{pair.Key}/tile_0&quot;);
 
-                if(sprite == null){
+                if (sprite == null)
+                {
+                    continue;
+                }
+
+                preparedTiles.Add(sprite);
+            }
+
+            foreach (var pair in AssetManager.topTiles.dict)
+            {
+                //var sprite = sprites.Find(c =&gt; c.name == $&quot;{pair.Key}_0&quot;);
+                var sprite = Resources.Load&lt;Sprite&gt;($&quot;tiles/{pair.Key}/tile_0&quot;);
+
+                if (sprite == null)
+                {
                     continue;
                 }
 
@@ -466,21 +489,39 @@ namespace ExampleMod{
 
             // Adding tile buttons to window
             int i = 0;
-            foreach(var pair in TileType.dict){
-                var sprite = preparedTiles.Find(c =&gt; c.name == $&quot;{pair.Key}_0&quot;);
-                if(sprite == null){
+            foreach (var pair in AssetManager.tiles.dict)
+            {
+                //var sprite = preparedTiles.Find(c =&gt; c.name == $&quot;{pair.Key}_0&quot;);
+                var sprite = Resources.Load&lt;Sprite&gt;($&quot;tiles/{pair.Key}/tile_0&quot;);
+                if (sprite == null)
+                {
                     continue;
                 }
 
-                createTileButton(pair.Key, sprite, i); // Creating tile button
+                createTileButton(pair.Key, &quot;tileType&quot;, sprite, i); // Creating tile button
+
+                i++;
+            }
+
+            foreach (var pair in AssetManager.topTiles.dict)
+            {
+                //var sprite = preparedTiles.Find(c =&gt; c.name == $&quot;{pair.Key}_0&quot;);
+                var sprite = Resources.Load&lt;Sprite&gt;($&quot;tiles/{pair.Key}/tile_0&quot;);
+                if (sprite == null)
+                {
+                    continue;
+                }
+
+                createTileButton(pair.Value.id, &quot;topTileType&quot;, sprite, i); // Creating tile button
 
                 i++;
             }
         }
 
-        private static void createTileButton(string tileName, Sprite sprite, int index){
+        private static void createTileButton(string tileName, string tileTypeType, Sprite sprite, int index)
+        {
             // Making all first char in each string upper
-            string name = String.Join(&quot; &quot;, tileName.Split('_').ToList().Select(c =&gt; {c = $&quot;{c[0].ToString().ToUpper()}{c.Substring(1)}&quot;; return c;}).ToList());
+            string name = String.Join(&quot; &quot;, tileName.Split('_').ToList().Select(c =&gt; { c = $&quot;{c[0].ToString().ToUpper()}{c.Substring(1)}&quot;; return c; }).ToList());
 
             // Creating new button
             var button = PowerButtons.CreateButton(
@@ -496,7 +537,7 @@ namespace ExampleMod{
                 content.transform,
 
                 // Setting on click callback with parameter
-                () =&gt; tileButtonClick(tileName)
+                () =&gt; tileButtonClick(tileName, tileTypeType)
             );
         }
 
@@ -504,7 +545,8 @@ namespace ExampleMod{
         Getting button position by its index
         By this formules we dont need any additional if-else constructions.
         */
-        private static Vector2 getPositionByIndex(int index){
+        private static Vector2 getPositionByIndex(int index)
+        {
 
             // Starting position by x
             float startX = 50;
@@ -526,13 +568,32 @@ namespace ExampleMod{
         }
 
         // On click callback with parameter
-        private static void tileButtonClick(string tileName){
+        private static void tileButtonClick(string tileName, string tileTypeType)
+        {
+
+            // Setting actions for power in our button
+            TilesPowerButton.power.click_action = null;
+            TilesPowerButton.power.click_action += new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;drawTiles&quot;, pTile, pPower); });
+            TilesPowerButton.power.click_action += new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;cleanBurnedTile&quot;, pTile, pPower); });
+            TilesPowerButton.power.click_action += new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;stopFire&quot;, pTile, pPower); });
+            TilesPowerButton.power.click_action += new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;destroyBuildings&quot;, pTile, pPower); });
+            TilesPowerButton.power.click_brush_action = null;
+            TilesPowerButton.power.click_brush_action += new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;loopWithCurrentBrush&quot;, pTile, pPower); });
 
             // When tile button clicked, hidding current window
             window.clickHide();
 
             // Setting new tile type
-            TilesPowerButton.power.tileType = tileName;
+            if (tileTypeType == &quot;tileType&quot;)
+            {
+                TilesPowerButton.power.tileType = tileName;
+                TilesPowerButton.power.topTileType = String.Empty;
+            }
+            else
+            {
+                TilesPowerButton.power.tileType = String.Empty;
+                TilesPowerButton.power.topTileType = tileName;
+            }
 
             // Activating power
             pbsInstance.clickPowerButton(TilesPowerButton.button);

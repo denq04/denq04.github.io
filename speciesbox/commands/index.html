@@ -25,9 +25,9 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/speciesbox/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/speciesbox/resources/css/retype.css?v=1.10.690910790374" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/speciesbox/resources/css/retype.css?v=1.10.691644749978" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/speciesbox/resources/js/config.js?v=1.10.690910790374" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/speciesbox/resources/js/config.js?v=1.10.691644749978" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/speciesbox/resources/js/retype.js?v=1.10" defer data-turbo-track="reload"></script>
 </head>
     <body>
@@ -547,6 +547,29 @@
 </tbody>
 </table>
 <p><br /><br /></p>
+<doc-anchor-target id="leaderboard">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#leaderboard">#</doc-anchor-trigger>
+        <span>Leaderboard</span>
+    </h3>
+</doc-anchor-target>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Aliases</th>
+<th style="text-align: center;">Cooldown</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">leaderboard, lb</td>
+<td style="text-align: center;">0h:0m:10s</td>
+<td style="text-align: left;">Use <code v-pre>_leaderboard</code> or <code v-pre>_lb</code> to get leaderboard</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
 <doc-anchor-target id="ping">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#ping">#</doc-anchor-trigger>
@@ -702,7 +725,7 @@
 <tbody>
 <tr>
 <td style="text-align: center;">rob</td>
-<td style="text-align: center;">16h:0m:0s</td>
+<td style="text-align: center;">24h:0m:0s</td>
 <td style="text-align: left;">Use this to rob other user for 12% of their gold<br />Use <code v-pre>_rob user_id</code> to rob other user for 12% of their gold</td>
 </tr>
 </tbody>
@@ -841,7 +864,7 @@
 <tr>
 <td style="text-align: center;">use, u</td>
 <td style="text-align: center;">0h:0m:5s</td>
-<td style="text-align: left;">Use items from your inventory (not equipment)<br />Use <code v-pre>_use food</code> to eat one food and regen your hp, stamina and mana for 15% of maximum (20% with regeneration trait)<br />Use <code v-pre>_use cfood</code> to eat one cooked food and regen your hp, stamina and mana for 25% of maximum (30% with regeneration trait)<br />Use <code v-pre>_use ug</code> to use upgrade gem and upgrade your character level<br />Use <code v-pre>_use hg</code> to use health gem and increase your current health (not max health)<br />Use <code v-pre>_use hg equipment_id</code> to use health gem on equipment to increase this equipment health stat<br />Use <code v-pre>_use sg</code> to use stamina gem and increase your current stamina (not max stamina)<br />Use <code v-pre>_use sg equipment_id</code> to use stamina gem on equipment to increase this equipment stamina stat<br />Use <code v-pre>_use mg</code> to use mana gem and increase your current mana (not max mana)<br />Use <code v-pre>_use mg equipment_id</code> to use mana gem on equipment to increase this equipment mana stat<br />Use <code v-pre>_use pg</code> to use power gem and temporary increase your attack stat<br />Use <code v-pre>_use pg equipment_id</code> to use power gem on equipment to increase this equipment attack stat<br />Use <code v-pre>_use dg</code> to use defense gem and temporary increase your defense stat<br />Use <code v-pre>_use dg equipment_id</code> to use defense gem on equipment to increase this equipment defense stat<br />Use <code v-pre>_use ag</code> to break absolute gem and receive few other type gems<br /><em>Each gem usage gives xp for character and for alchemy skill. Alchemy skill can increase gems effects. You can use gems only 5 times on one equipment</em></td>
+<td style="text-align: left;">Use items from your inventory (not equipment)<br />Use <code v-pre>_use food</code> to eat one food and regen your hp, stamina and mana for 15 points (20 with regeneration trait)<br />Use <code v-pre>_use cfood</code> to eat one cooked food and regen your hp, stamina and mana for 25 points (35 with regeneration trait)<br />Use <code v-pre>_use hg</code> to use health gem and increase your current health (not max health)<br />Use <code v-pre>_use hg equipment_id</code> to use health gem on equipment to increase this equipment health stat<br />Use <code v-pre>_use sg</code> to use stamina gem and increase your current stamina (not max stamina)<br />Use <code v-pre>_use sg equipment_id</code> to use stamina gem on equipment to increase this equipment stamina stat<br />Use <code v-pre>_use mg</code> to use mana gem and increase your current mana (not max mana)<br />Use <code v-pre>_use mg equipment_id</code> to use mana gem on equipment to increase this equipment mana stat<br />Use <code v-pre>_use pg</code> to use power gem and temporary increase your attack stat<br />Use <code v-pre>_use pg equipment_id</code> to use power gem on equipment to increase this equipment attack stat<br />Use <code v-pre>_use dg</code> to use defense gem and temporary increase your defense stat<br />Use <code v-pre>_use dg equipment_id</code> to use defense gem on equipment to increase this equipment defense stat<br />Use <code v-pre>_use ag</code> to break absolute gem and receive few other type gems<br /><em>Each gem usage gives xp for character and for alchemy skill. Alchemy skill can increase gems effects. You can use gems only 5 times on one equipment</em></td>
 </tr>
 </tbody>
 </table>
