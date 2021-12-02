@@ -27,11 +27,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/ncms/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/ncms/resources/css/retype.css?v=1.10.691570221334" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/ncms/resources/css/retype.css?v=1.10.691731624401" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/ncms/resources/js/config.js?v=1.10.691570221334" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/ncms/resources/js/config.js?v=1.10.691731624401" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/ncms/resources/js/retype.js?v=1.10" defer data-turbo-track="reload"></script>
-    <script id="prism-js" type="text/javascript" src="/ncms/resources/js/prism.js?v=1.10.691570221334" defer></script>
+    <script id="prism-js" type="text/javascript" src="/ncms/resources/js/prism.js?v=1.10.691731624401" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -570,19 +570,6 @@ namespace ExampleMod
         // On click callback with parameter
         private static void tileButtonClick(string tileName, string tileTypeType)
         {
-
-            // Setting actions for power in our button
-            TilesPowerButton.power.click_action = null;
-            TilesPowerButton.power.click_action += new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;drawTiles&quot;, pTile, pPower); });
-            TilesPowerButton.power.click_action += new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;cleanBurnedTile&quot;, pTile, pPower); });
-            TilesPowerButton.power.click_action += new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;stopFire&quot;, pTile, pPower); });
-            TilesPowerButton.power.click_action += new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;destroyBuildings&quot;, pTile, pPower); });
-            TilesPowerButton.power.click_brush_action = null;
-            TilesPowerButton.power.click_brush_action += new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;loopWithCurrentBrush&quot;, pTile, pPower); });
-
-            // When tile button clicked, hidding current window
-            window.clickHide();
-
             // Setting new tile type
             if (tileTypeType == &quot;tileType&quot;)
             {
@@ -594,6 +581,23 @@ namespace ExampleMod
                 TilesPowerButton.power.tileType = String.Empty;
                 TilesPowerButton.power.topTileType = tileName;
             }
+
+
+            // Setting actions for power in our button
+            //TilesPowerButton.power.click_action = null;
+            TilesPowerButton.power.click_action = new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;drawTiles&quot;, pTile, pPower); });
+            TilesPowerButton.power.click_action += new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;cleanBurnedTile&quot;, pTile, pPower); });
+            TilesPowerButton.power.click_action += new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;stopFire&quot;, pTile, pPower); });
+            TilesPowerButton.power.click_action += new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;destroyBuildings&quot;, pTile, pPower); });
+            TilesPowerButton.power.click_brush_action = new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;loopWithCurrentBrush&quot;, pTile, pPower); });
+
+            //Setting cached_tile_type_asset
+            AssetManager.powers.checkCache();
+
+            // When tile button clicked, hidding current window
+            window.clickHide();
+
+
 
             // Activating power
             pbsInstance.clickPowerButton(TilesPowerButton.button);
