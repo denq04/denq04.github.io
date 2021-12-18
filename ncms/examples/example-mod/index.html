@@ -27,11 +27,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/ncms/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/ncms/resources/css/retype.css?v=1.10.691864178349" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/ncms/resources/css/retype.css?v=1.10.693170738304" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/ncms/resources/js/config.js?v=1.10.691864178349" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/ncms/resources/js/config.js?v=1.10.693170738304" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/ncms/resources/js/retype.js?v=1.10" defer data-turbo-track="reload"></script>
-    <script id="prism-js" type="text/javascript" src="/ncms/resources/js/prism.js?v=1.10.691864178349" defer></script>
+    <script id="prism-js" type="text/javascript" src="/ncms/resources/js/prism.js?v=1.10.693170738304" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -64,6 +64,12 @@
     <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
         <li class="md:mr-6">
             <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="/ncms/getting-started/">Getting Started</a>
+        </li>
+        <li class="md:mr-6">
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="/ncms/how-to-install/">How To Intall NCMS</a>
+        </li>
+        <li class="md:mr-6">
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="/ncms/downloads/">Downloads</a>
         </li>
     </ul>
 </nav>
@@ -152,6 +158,12 @@
                         <li class="mr-6">
                             <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/getting-started">Getting Started</a>
                         </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/how-to-install">How To Intall NCMS</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/downloads">Downloads</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -227,11 +239,14 @@ using NCMS;
 using UnityEngine;
 using ReflectionUtility;
 
-namespace ExampleMod{
-    class CoffeeCloud{
+namespace ExampleMod
+{
+    class CoffeeCloud
+    {
 
         // Initializing Coffee Cloud power
-        public static void init(){
+        public static void init()
+        {
 
             // Creating new God Power
             var spawnCoffeeCloud = new GodPower();
@@ -246,7 +261,6 @@ namespace ExampleMod{
 
             // We dont need to spawn many clouds just by holding
             spawnCoffeeCloud.holdAction = false;
-            spawnCoffeeCloud.flashPixel = true;
 
             // We dont need to select tool size
             spawnCoffeeCloud.showToolSizes = false;
@@ -285,7 +299,7 @@ namespace ExampleMod{
                 NCMS.Utils.PowerTab.Nature,
 
                 // Position of button in this tab. 489.6f by x is the position of snow cloud and + 36 offset. -18 by y means this button will be on second row
-                new Vector2(489.6f + 36, -18));
+                new Vector2(680.6f + 36, -18));
         }
 
         public static bool action_spawnCloud(WorldTile pTile = null, string pPower = &quot;&quot;)
@@ -427,15 +441,17 @@ namespace ExampleMod
             window = Windows.CreateNewWindow(&quot;tilesWindow&quot;, &quot;Select Tile&quot;);
 
             // Activating Scroll View object
-            GameObject.Find(&quot;/Canvas/CanvasWindows/windows/&quot; + window.name + &quot;/Background/Scroll View&quot;).gameObject.SetActive(true);
+            var scrollView = GameObject.Find($&quot;/Canvas Container Main/Canvas - Windows/windows/{window.name}/Background/Scroll View&quot;);
+            scrollView.gameObject.SetActive(true);
+
 
             // Fixing size to fit
-            var viewport = GameObject.Find($&quot;/Canvas/CanvasWindows/windows/{window.name}/Background/Scroll View/Viewport&quot;);
+            var viewport = GameObject.Find($&quot;/Canvas Container Main/Canvas - Windows/windows/{window.name}/Background/Scroll View/Viewport&quot;);
             var viewportRect = viewport.GetComponent&lt;RectTransform&gt;();
             viewportRect.sizeDelta = new Vector2(0, 17);
 
             // Getting Content object
-            content = GameObject.Find(&quot;/Canvas/CanvasWindows/windows/&quot; + window.name + &quot;/Background/Scroll View/Viewport/Content&quot;);
+            content = GameObject.Find($&quot;/Canvas Container Main/Canvas - Windows/windows/{window.name}/Background/Scroll View/Viewport/Content&quot;);
 
             // Getting power button selector using reflections with ReflectionUtility
             pbsInstance = Reflection.GetField(typeof(PowerButtonSelector), null, &quot;instance&quot;) as PowerButtonSelector;
