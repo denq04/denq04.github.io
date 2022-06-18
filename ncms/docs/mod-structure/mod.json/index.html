@@ -25,11 +25,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/ncms/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/ncms/resources/css/retype.css?v=1.10.705489923271" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/ncms/resources/css/retype.css?v=1.10.708857868783" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/ncms/resources/js/config.js?v=1.10.705489923271" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/ncms/resources/js/config.js?v=1.10.708857868783" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/ncms/resources/js/retype.js?v=1.10" defer data-turbo-track="reload"></script>
-    <script id="prism-js" type="text/javascript" src="/ncms/resources/js/prism.js?v=1.10.705489923271" defer></script>
+    <script id="prism-js" type="text/javascript" src="/ncms/resources/js/prism.js?v=1.10.708857868783" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -210,9 +210,14 @@
         <span>Definitions</span>
     </h3>
 </doc-anchor-target>
-<p><code v-pre>name</code> - the name of your mod, should be unique;<br />
+<p><code v-pre>name</code> - the name of your mod, should be unique. If you want to make extension for one of existing mod, 
+mod name should looks like <code v-pre>OriginalModName.preload.yourExtensionModName</code>, 
+where <code v-pre>OriginalModName</code> is name of original mod to which this mod will be as extension,
+<code v-pre>preload</code> if this extension mod should be loaded right before original mod or <code v-pre>postload</code> if this extension mod should be loaded right after original mod and then
+<code v-pre>yourExtensionModName</code> as name of your extension mod;<br />
 <code v-pre>author</code> - the name of mod&#x27;s author;<br />
 <code v-pre>version</code> - mod&#x27;s current version;<br />
+<code v-pre>targetGameBuild</code> - game&#x27;s build for which this mod was made. If mod&#x27;s <code v-pre>targetGameBuild</code> will not be same as game&#x27;s build number, there will be attention on mod in NCMS mods window;<br />
 <code v-pre>description</code> - the description of your mod;<br />
 <code v-pre>iconPath</code> - path to icon, relative path starting from root mod&#x27;s folder.</p>
 <doc-anchor-target id="example">
@@ -226,7 +231,24 @@
     &quot;name&quot;: &quot;Example mod&quot;,
     &quot;author&quot;: &quot;Nikon#7777&quot;,
     &quot;version&quot;: &quot;0.0.1&quot;,
+    &quot;targetGameBuild&quot;: 444,
     &quot;description&quot;: &quot;This is an example mod's description!&quot;,
+    &quot;iconPath&quot;: &quot;icon.png&quot;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="extension-mod-example">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#extension-mod-example">#</doc-anchor-trigger>
+        <span>Extension Mod Example</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+    &quot;name&quot;: &quot;PowerBox.postload.New Cool Powers&quot;,
+    &quot;author&quot;: &quot;Nikon#7777&quot;,
+    &quot;version&quot;: &quot;0.0.1&quot;,
+    &quot;targetGameBuild&quot;: 444,
+    &quot;description&quot;: &quot;This mod adds new powers to the PowerBox's tab&quot;,
     &quot;iconPath&quot;: &quot;icon.png&quot;
 }</code></pre>
 </doc-codeblock></div>
