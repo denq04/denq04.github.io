@@ -25,9 +25,9 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/ncms/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/ncms/resources/css/retype.css?v=1.10.708857868783" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/ncms/resources/css/retype.css?v=1.10.710162303497" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/ncms/resources/js/config.js?v=1.10.708857868783" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/ncms/resources/js/config.js?v=1.10.710162303497" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/ncms/resources/js/retype.js?v=1.10" defer data-turbo-track="reload"></script>
 </head>
     <body>
@@ -203,6 +203,18 @@
     </h1>
 </doc-anchor-target>
 <p>This page contains pathlogs for NCMS versions</p>
+<doc-anchor-target id="150">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#150">#</doc-anchor-trigger>
+        <span>1.5.0</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Changed <a href="/ncms/docs/types/ncms/utils/localization">NCMS.Utils.Localization</a>. Changed method names and added method <code v-pre>AddOrSet</code></li>
+<li>Added <code v-pre>.zip</code> as allowed extension for mod. <code v-pre>.mod</code> still works, but marked as obsolete and will be removed in future updates</li>
+<li>Added one-click integration with <a href="https://gamebanana.com/games/11196">Gamebanana</a>. Now, if you mod have extention <code v-pre>.zip</code> instead of <code v-pre>.mod</code>, and it contains mod files directly in that <code v-pre>.zip</code>, on mod&#x27;s page on gamebanana will appear one-click installation button</li>
+</ul>
+<hr />
 <doc-anchor-target id="141">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#141">#</doc-anchor-trigger>

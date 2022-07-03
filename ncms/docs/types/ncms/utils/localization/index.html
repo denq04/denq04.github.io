@@ -25,9 +25,9 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/ncms/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/ncms/resources/css/retype.css?v=1.10.708857868783" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/ncms/resources/css/retype.css?v=1.10.710162303497" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/ncms/resources/js/config.js?v=1.10.708857868783" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/ncms/resources/js/config.js?v=1.10.710162303497" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/ncms/resources/js/retype.js?v=1.10" defer data-turbo-track="reload"></script>
 </head>
     <body>
@@ -213,9 +213,10 @@
 <p>No fields</p>
     </div>
     <div class="px-5 py-3 docs-columns-content">
-<p><doc-anchor-trigger to="#addlocalizationkey-value-void">addLocalization</doc-anchor-trigger> <br />
-<doc-anchor-trigger to="#setlocalizationkey-value-void">setLocalization</doc-anchor-trigger> <br />
-<doc-anchor-trigger to="#getlocalizationkey-string">getLocalization</doc-anchor-trigger> <br /></p>
+<p><doc-anchor-trigger to="#addkey-value-void">Add</doc-anchor-trigger> <br />
+<doc-anchor-trigger to="#setkey-value-void">Set</doc-anchor-trigger> <br />
+<doc-anchor-trigger to="#addorsetkey-value-void">AddOrSet</doc-anchor-trigger> <br />
+<doc-anchor-trigger to="#getkey-string">Get</doc-anchor-trigger> <br /></p>
     </div>
 </div>
 <doc-anchor-target id="constructors">
@@ -240,10 +241,10 @@
         <span>Methods</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="addlocalizationkey-value-void">
+<doc-anchor-target id="addkey-value-void">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#addlocalizationkey-value-void">#</doc-anchor-trigger>
-        <span>addLocalization(key, value): <code v-pre>void</code></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#addkey-value-void">#</doc-anchor-trigger>
+        <span>Add(key, value): <code v-pre>void</code></span>
     </h3>
 </doc-anchor-target>
 <p>Add new string to localization</p>
@@ -273,10 +274,10 @@
 </table>
 <p>Returns: <code v-pre>void</code></p>
 <hr />
-<doc-anchor-target id="setlocalizationkey-value-void">
+<doc-anchor-target id="setkey-value-void">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#setlocalizationkey-value-void">#</doc-anchor-trigger>
-        <span>setLocalization(key, value): <code v-pre>void</code></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setkey-value-void">#</doc-anchor-trigger>
+        <span>Set(key, value): <code v-pre>void</code></span>
     </h3>
 </doc-anchor-target>
 <p>Change existing localization value</p>
@@ -306,10 +307,43 @@
 </table>
 <p>Returns: <code v-pre>void</code></p>
 <hr />
-<doc-anchor-target id="getlocalizationkey-string">
+<doc-anchor-target id="addorsetkey-value-void">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getlocalizationkey-string">#</doc-anchor-trigger>
-        <span>getLocalization(key): <code v-pre>string</code></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#addorsetkey-value-void">#</doc-anchor-trigger>
+        <span>AddOrSet(key, value): <code v-pre>void</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Add new string to localization or change existing localization value</p>
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Optional</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code v-pre>key</code></td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">Key of value which you want to add or edit</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code v-pre>value</code></td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">Localization value</td>
+</tr>
+</tbody>
+</table>
+<p>Returns: <code v-pre>void</code></p>
+<hr />
+<doc-anchor-target id="getkey-string">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#getkey-string">#</doc-anchor-trigger>
+        <span>Get(key): <code v-pre>string</code></span>
     </h3>
 </doc-anchor-target>
 <p>Get localization value by key</p>
