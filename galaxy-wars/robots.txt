@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://galaxy-wars.space/sitemap.xml.gz

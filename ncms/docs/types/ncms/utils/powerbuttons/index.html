@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/ncms">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.722781909316">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.729424823277">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -31,12 +31,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/ncms/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../../resources/css/retype.css?v=2.4.0.722781909316" rel="stylesheet" />
+    <link href="../../../../../resources/css/retype.css?v=2.4.0.729424823277" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../../resources/js/config.js?v=2.4.0.722781909316" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../../resources/js/config.js?v=2.4.0.729424823277" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../../resources/js/lunr.js?v=2.4.0.722781909316" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../../../resources/js/prism.js?v=2.4.0.722781909316" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../../resources/js/lunr.js?v=2.4.0.729424823277" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../../resources/js/prism.js?v=2.4.0.729424823277" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -319,6 +319,65 @@ static void exampleMethod(){
 }</code></pre>
 </doc-codeblock></div>
 <hr />
+<doc-anchor-target id="createtextbuttonname-text-position-color-position-parent--null-callback--null-unityenginebutton">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#createtextbuttonname-text-position-color-position-parent--null-callback--null-unityenginebutton">#</doc-anchor-trigger>
+        <span>CreateTextButton(name, text, position, color, position, parent = null, callback = null): <code v-pre>UnityEngine.Button</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Creates new PowerButton</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Optional</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code v-pre>name</code></td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">GameObject name of new button</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code v-pre>text</code></td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">Text which will be shown on the button</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code v-pre>position</code></td>
+<td style="text-align: center;">UnityEngine.Vector2</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">Button position</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code v-pre>color</code></td>
+<td style="text-align: center;">UnityEngine.Color</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">Color of button</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code v-pre>parent</code></td>
+<td style="text-align: center;">UnityEngine.Transform</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: left;">Parent object to which this button will be attached</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code v-pre>callback</code></td>
+<td style="text-align: center;">UnityEngine.Events.UnityAction</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: left;">Button on click behaviour</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Returns: <code v-pre>UnityEngine.Button</code></p>
+<hr />
 <doc-anchor-target id="addbuttontotabbutton-tab-position-void">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#addbuttontotabbutton-tab-position-void">#</doc-anchor-trigger>
@@ -376,6 +435,64 @@ static void exampleMethod(){
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
+<hr />
+<doc-anchor-target id="gettogglevaluename-bool">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gettogglevaluename-bool">#</doc-anchor-trigger>
+        <span>GetToggleValue(name): <code v-pre>bool</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Checks current state of button with type <code v-pre>Toggle</code></p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Optional</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code v-pre>name</code></td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">Name of button which toggle state you want to check</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Returns: <code v-pre>bool</code></p>
+<hr />
+<doc-anchor-target id="togglebuttonname-void">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#togglebuttonname-void">#</doc-anchor-trigger>
+        <span>ToggleButton(name): <code v-pre>void</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Changes current state of button with type <code v-pre>Toggle</code></p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Optional</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code v-pre>name</code></td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">Name of button which toggle state you want to change</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Returns: <code v-pre>void</code></p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -413,7 +530,7 @@ static void exampleMethod(){
                                     <ul class="flex flex-wrap items-center text-sm">
                                     </ul>
                                 </div>
-                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2022. All rights reserved.</p></div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2023. All rights reserved.</p></div>
                             </footer>
                         </div>
                     </div>
