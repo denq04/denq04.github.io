@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/ncms">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.731789433171">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.731938140041">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Example Mod</title>
     <meta name="title" content="Example Mod">
-    <meta name="description" content="This is the Example Mod. It should be auto-installed with NCMS. There is two new buttons:" />
+    <meta name="description" content="This is the Example Mod. It should be auto-installed with NCMS. There is one new button:" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://denq04.github.io/ncms/examples/example-mod/" />
@@ -21,22 +21,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://denq04.github.io/ncms/examples/example-mod/">
     <meta property="og:title" content="Example Mod">
-    <meta property="og:description" content="This is the Example Mod. It should be auto-installed with NCMS. There is two new buttons:">
+    <meta property="og:description" content="This is the Example Mod. It should be auto-installed with NCMS. There is one new button:">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://denq04.github.io/ncms/examples/example-mod/">
     <meta property="twitter:title" content="Example Mod">
-    <meta property="twitter:description" content="This is the Example Mod. It should be auto-installed with NCMS. There is two new buttons:">
+    <meta property="twitter:description" content="This is the Example Mod. It should be auto-installed with NCMS. There is one new button:">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/ncms/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.731789433171" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.731938140041" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.731789433171" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.731938140041" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.731789433171" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.731789433171" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.731938140041" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.731938140041" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -197,9 +197,8 @@
     </h1>
 </doc-anchor-target>
 <p>This is the Example Mod. It should be auto-installed with <code v-pre>NCMS</code>.
-There is two new buttons:</p>
+There is one new button:</p>
 <ul>
-<li>Coffee Cloud button, which activates new power — Coffee Clouds spawning</li>
 <li>Any Tile To Draw button, which shows window where you can select any tile presented in game and draw with it</li>
 </ul>
 <doc-tabs>
@@ -215,117 +214,11 @@ namespace ExampleMod{
     [ModEntry]
     class Main : MonoBehaviour{
         void Awake(){
-            // Initializing Coffee Cloud power
-            CoffeeCloud.init();
-
             // Initializing Tiles Window
             TilesWindow.init();
 
             // Initializing Tiles Button
             TilesPowerButton.init();
-        }
-    }
-}</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab id="coffeecloud-cs">
-<template #title>CoffeeCloud.cs</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-csharp"><code v-pre class="language-csharp">using System;
-using NCMS;
-using UnityEngine;
-using ReflectionUtility;
-
-namespace ExampleMod
-{
-    class CoffeeCloud
-    {
-
-        // Initializing Coffee Cloud power
-        public static void init()
-        {
-
-            // Creating new God Power
-            var spawnCoffeeCloud = new GodPower();
-
-            spawnCoffeeCloud.id = &quot;coffeeCloudSpawn&quot;;
-            spawnCoffeeCloud.name = &quot;coffeeCloudSpawn&quot;;
-            spawnCoffeeCloud.forceBrush = &quot;sqr_0&quot;;
-            spawnCoffeeCloud.type = PowerActionType.Special;
-
-            // Action, which represents cloud spawning
-            spawnCoffeeCloud.click_action = new PowerActionWithID(action_spawnCloud);
-
-            // We dont need to spawn many clouds just by holding
-            spawnCoffeeCloud.holdAction = false;
-
-            // We dont need to select tool size
-            spawnCoffeeCloud.showToolSizes = false;
-
-            spawnCoffeeCloud.unselectWhenWindow = true;
-
-            //// We dont need falling pixel
-            //spawnCoffeeCloud.fallingPixel = false;
-
-            // Adding new god power to the AssetManager
-            AssetManager.powers.add(spawnCoffeeCloud);
-
-            // Creating new PowerButton
-            var button = NCMS.Utils.PowerButtons.CreateButton(
-
-                // Must be the same as spawnCoffeeCloud.id
-                &quot;coffeeCloudSpawn&quot;,
-
-                // Using ingame sprite for our new button
-                Resources.Load&lt;Sprite&gt;(&quot;ui/icons/iconcoffee&quot;),
-                &quot;Coffee Cloud&quot;,
-                &quot;Raining coffee&quot;,
-                Vector2.zero,
-
-                // Type of our power: GodPower
-                NCMS.Utils.ButtonType.GodPower
-            );
-
-            // Adding our button to the tab
-            NCMS.Utils.PowerButtons.AddButtonToTab(
-
-                // Our button
-                button,
-
-                // Nature tab
-                NCMS.Utils.PowerTab.Nature,
-
-                // Position of button in this tab. 489.6f by x is the position of snow cloud and + 36 offset. -18 by y means this button will be on second row
-                new Vector2(680.6f + 36, -18));
-        }
-
-        public static bool action_spawnCloud(WorldTile pTile = null, string pPower = &quot;&quot;)
-        {
-            // We need some default cloud to use for create out own
-            GodPower godPower = AssetManager.powers.get(&quot;cloudAcid&quot;);
-
-            // Check tile for null just in case
-            if (pTile == null)
-            {
-                // Exit from method if null
-                return false;
-            }
-
-            var cloud = MapBox.instance.cloudController.getNext();
-
-            // Calling cloud.prepare(pTile.posV3, godPower.id) using reflections
-            var method = cloud.GetType().GetMethod(&quot;prepare&quot;, System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance, null, new[] { typeof(Vector3), typeof(string) }, null);
-            method.Invoke(cloud, new object[] { pTile.posV3, godPower.id });
-
-
-            // Setting coffee as drop id
-            Reflection.SetField&lt;string&gt;(cloud, &quot;dropID&quot;, &quot;coffee&quot;);
-
-            // Setting brown color for this cloud
-            cloud.sprRenderer.color = new Color(0.30f, 0.21f, 0.15f, 0.77f);
-
-
-            return true;
         }
     }
 }</code></pre>
@@ -382,6 +275,7 @@ namespace ExampleMod{
                 OpenWindow
             );
 
+
             // Adding our button to the tab
             PowerButtons.AddButtonToTab(
                 button,
@@ -389,12 +283,13 @@ namespace ExampleMod{
                 // Drawings tab
                 PowerTab.Drawing,
 
-                // Position of button in this tab. 345.6f by x is the position of snow cloud and + 36 offset. 18 by y means this button will be on first row.
-                new Vector2(345.6f + 36, 18));
+                // Position of button in this tab. 511.2f by x, 18 by y means this button will be on first row.
+                new Vector2(511.2f, 18));
         }
 
-        private static void OpenWindow(){
-            if (TilesWindow.pbsInstance.isPowerSelected(&quot;anyTile&quot;))
+        private static void OpenWindow()
+        {
+            if (MapBox.instance.isSelectedPower(&quot;anyTile&quot;))
             {
                 // Showing tilesWindow window
                 Windows.ShowWindow(&quot;tilesWindow&quot;);
@@ -584,19 +479,32 @@ namespace ExampleMod
         private static void tileButtonClick(string tileName, string tileTypeType)
         {
             // Setting new tile type
-            if (tileTypeType == &quot;tileType&quot;)
-            {
-                TilesPowerButton.power.tileType = tileName;
-                TilesPowerButton.power.topTileType = String.Empty;
-                TilesPowerButton.power.cached_tile_type_asset = AssetManager.tiles.get(TilesPowerButton.power.tileType);
-                TilesPowerButton.power.cached_top_tile_type_asset = null;
-            }
-            else
+            if (tileTypeType == &quot;topTileType&quot;)
             {
                 TilesPowerButton.power.tileType = String.Empty;
                 TilesPowerButton.power.topTileType = tileName;
                 TilesPowerButton.power.cached_tile_type_asset = null;
                 TilesPowerButton.power.cached_top_tile_type_asset = AssetManager.topTiles.get(TilesPowerButton.power.topTileType);
+
+
+
+                if (tileName.Contains(&quot;high&quot;))
+                {
+                    TilesPowerButton.power.tileType = &quot;soil_low&quot;;
+                    TilesPowerButton.power.cached_tile_type_asset = AssetManager.tiles.get(TilesPowerButton.power.tileType);
+                }
+                else if (tileName.Contains(&quot;low&quot;))
+                {
+                    TilesPowerButton.power.tileType = &quot;soil_high&quot;;
+                    TilesPowerButton.power.cached_tile_type_asset = AssetManager.tiles.get(TilesPowerButton.power.tileType);
+                }
+            }
+            else
+            {
+                TilesPowerButton.power.tileType = tileName;
+                TilesPowerButton.power.topTileType = String.Empty;
+                TilesPowerButton.power.cached_tile_type_asset = AssetManager.tiles.get(TilesPowerButton.power.tileType);
+                TilesPowerButton.power.cached_top_tile_type_asset = null;
             }
 
 
@@ -609,7 +517,7 @@ namespace ExampleMod
             TilesPowerButton.power.click_brush_action = new PowerActionWithID((WorldTile pTile, string pPower) =&gt; { return (bool)AssetManager.powers.CallMethod(&quot;loopWithCurrentBrush&quot;, pTile, pPower); });
 
             //Setting cached_tile_type_asset
-            AssetManager.powers.checkCache();
+            //AssetManager.powers.checkCache();
 
             // When tile button clicked, hidding current window
             window.clickHide();
@@ -624,9 +532,7 @@ namespace ExampleMod
 </doc-codeblock></div>
 </doc-tab>
 </doc-tabs>
-<p>Result:
-<img src="files/images/button_cloud.png" alt="New button inside Natures tab" title="New button inside Natures tab" /> <br /></p>
-<p><img src="files/images/button_cloud_usage.gif" alt="Coffee cloud power usage" title="Coffee cloud power usage" /> <br /></p>
+<p>Result:</p>
 <p><img src="files/images/button_tiles.png" alt="New button inside Drawings tab" title="New button inside Drawings tab" /> <br /></p>
 <p><img src="files/images/button_tiles_usage.gif" alt="Any tile drawing power usage" title="Any tile drawing power usage" /> <br /></p>
 
